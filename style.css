@@ -1,0 +1,15 @@
+.container,
+.container-btn {
+	margin: 20px auto;
+	max-width: 1024px;
+	width: 90%;
+}
+.btn-run {
+	width: 8em;
+	cursor: pointer;
+}
+.btn-run.disabled {
+	cursor: none;
+	background-color: green;
+	color:black
+}
