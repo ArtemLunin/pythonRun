@@ -17,6 +17,7 @@ const runInterface = e => {
 	if(!!target) {
 		const deviceIP = target.querySelector('.deviceIP');
 		const deviceInt = target.querySelector('.deviceInt');
+		const intDescription = target.querySelector('.intDescription');
 		if(deviceIP.value.length < 5 || deviceInt.value.length < 5)
 		{
 			alert('Wrong parameters');
@@ -26,6 +27,7 @@ const runInterface = e => {
 		runCommand({
 			'ip': deviceIP.value,
 			'int': deviceInt.value,
+			'desc': intDescription.value,
 		}, processResponse, runBtn);
 	}
 	
@@ -37,6 +39,7 @@ const addNewDevice = () => {
 	div.innerHTML = `
 		<input type="text" class="deviceIP" required placeholder="IP address" value="" size="40">
 		<input type="text" class="deviceInt" required placeholder="Interface" value="" size="20">
+		<input type="text" class="intDescription" required placeholder="Description" value="" size="20">
 		<button type="button" class="btn-run added-run">Run</button>
 	`;
 	container.append(div);
